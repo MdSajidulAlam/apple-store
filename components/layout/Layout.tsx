@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../shared/Header/Header";
+import Header from "../shared/Navbar";
 import Footer from "../shared/Footer/Footer";
 
 interface Props {
