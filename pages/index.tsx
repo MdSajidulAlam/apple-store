@@ -4,6 +4,8 @@ import { RootState } from "@/redux/store/store";
 import { decrement, increment } from "@/redux/slice/counter/counter";
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
+import Banner from "@/components/Banner/Banner";
+import SecondBanner from "@/components/Banner/SecondBanner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,19 +32,10 @@ export default function Home() {
     });
   };
   return (
-    <main>
-      {" "}
-      <div>
-        <button aria-label="Increment value" onClick={hanldeClick}>
-          Increment
-        </button>
-        <span>{count}</span>
-        <button
-          aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}>
-          Decrement
-        </button>
-      </div>
+    <main className="bg-common">
+      <Banner />
+      <SecondBanner />
+      <Banner />
     </main>
   );
 }

@@ -9,6 +9,7 @@ const NavLink = ({
   color,
   large,
   onClick,
+  className,
   onMouseEnter,
   onMouseLeave,
 }: NavLinkProps) => {
@@ -22,7 +23,7 @@ const NavLink = ({
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
       color={color}
-      className={currentRoute === route ? "active" : ""}>
+      className={`${className} ${currentRoute === route ? "active" : ""}`}>
       {children}
     </Link>
   );

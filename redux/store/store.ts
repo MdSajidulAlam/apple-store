@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import counterReducer from "../slice/counter/counter";
+import dropDownSlice from "../slice/counter/dropDown";
 
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
+    dropDownReducer: dropDownSlice,
   },
 });
 
