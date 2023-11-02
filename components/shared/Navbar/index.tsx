@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <section className="fixed top-0 w-full">
       <div className="relative bg-[#1D1D1F] bg-opacity-90 text-white text-xs">
-        <nav className="flex justify-center items-center gap-8 h-[44px]">
+        <nav className="container mx-auto flex justify-center items-center gap-8 h-[44px]">
           <NavLink route="/">
             <Icon name="header_icon" />
           </NavLink>

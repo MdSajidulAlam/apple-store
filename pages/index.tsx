@@ -35,7 +35,7 @@ export default function Home() {
     <main className="bg-common">
       <Banner />
       <SecondBanner />
-      <Banner />
+      {/* <Banner /> */}
     </main>
   );
 }
