@@ -1,7 +1,11 @@
 import React from "react";
 
 const Iphone = () => {
-  return <div>This iPhone component is under develop</div>;
+  return (
+    <div>
+      <p>Expore iPhone</p>
+    </div>
+  );
 };
 
 export default Iphone;

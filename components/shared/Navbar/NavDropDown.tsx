@@ -9,35 +9,39 @@ import TvHome from "./NavDropdownComponent/TvHome/TvHome";
 import Entertainment from "./NavDropdownComponent/Entertainment/Entertainment";
 import Accesssories from "./NavDropdownComponent/Accesssories/Accesssories";
 import Support from "./NavDropdownComponent/Support/Support";
+import Search from "./NavDropdownComponent/Search/Search";
 
 const NavDropDown = ({ nav, className }: any) => {
   // if (nav == "store") {
   return (
     <div className={className}>
-      {nav == "store" ? (
-        <Store />
-      ) : nav == "mac" ? (
-        <Mac />
-      ) : nav == "ipad" ? (
-        <Ipad />
-      ) : nav == "iphone" ? (
-        <Iphone />
-      ) : nav == "watch" ? (
-        <Watch />
-      ) : nav == "airpods" ? (
-        <Airpods />
-      ) : nav == "tvhome" ? (
-        <TvHome />
-      ) : nav == "entertainment" ? (
-        <Entertainment />
-      ) : nav == "accessories" ? (
-        <Accesssories />
-      ) : nav == "support" ? (
-        <Support />
-      ) : (
-        ""
-      )}
-      {/* Store */}
+      <div className="w-[52%] mx-auto">
+        {nav == "store" ? (
+          <Store />
+        ) : nav == "mac" ? (
+          <Mac />
+        ) : nav == "ipad" ? (
+          <Ipad />
+        ) : nav == "iphone" ? (
+          <Iphone />
+        ) : nav == "watch" ? (
+          <Watch />
+        ) : nav == "airpods" ? (
+          <Airpods />
+        ) : nav == "tvhome" ? (
+          <TvHome />
+        ) : nav == "entertainment" ? (
+          <Entertainment />
+        ) : nav == "accessories" ? (
+          <Accesssories />
+        ) : nav == "support" ? (
+          <Support />
+        ) : nav == "search" ? (
+          <Search />
+        ) : (
+          ""
+        )}
+      </div>
     </div>
   );
   // }

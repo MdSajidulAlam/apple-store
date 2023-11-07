@@ -77,8 +77,8 @@ const footerContent = [
 const Footer = () => {
   return (
     <footer className="bg-common ">
-      <div className="container mx-auto">
-        <div className="text-xs leading-[1.33337] font-normal text-[#6e6e73]">
+      <div className="w-[52%] mx-auto">
+        <div className="text-xs leading-[1.33337] font-normal text-[#6e6e73] py-5">
           <li>
             {" "}
             1. Trade-in values will vary based on the condition, year, and
@@ -117,7 +117,27 @@ const Footer = () => {
           </li>
           <li>A subscription is required for Apple TV+.</li>
         </div>
-        <div></div>
+        <div className="h-[1px] bg-[#d2d2d7] my-8"></div>
+        <div>
+          {footerContent.map((content) => {
+            return (
+              <div key={content._id}>
+                <h1>{content.category}</h1>
+                <ul>
+                  {content.categoryItems.map((item) => {
+                    return (
+                      <li key={item._id}>
+                        <span className="text-[#6e6e73] cursor-pointer underline-appear">
+                          {item.item}
+                        </span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </footer>
   );

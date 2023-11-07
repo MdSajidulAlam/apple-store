@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <section className="fixed top-0 w-full">
       <div className="relative bg-[#1D1D1F] bg-opacity-90 text-white text-xs">
-        <nav className="container mx-auto flex justify-center items-center gap-8 h-[44px]">
+        <nav className="w-[52%] mx-auto flex justify-between items-center h-[44px]">
           <NavLink route="/">
             <Icon name="header_icon" />
           </NavLink>
@@ -87,21 +87,22 @@ const Header = () => {
           </NavLink>
           <NavLink
             className="py-[14px]"
-            onMouseEnter={() => setState("support")}
-            onMouseLeave={() => setState(null)}
-            route="/store">
+            // onMouseEnter={() => setState("support")}
+            // onMouseLeave={() => setState(null)}
+            onClick={() => setState("search")}
+            route="">
             <Icon name="search_icon" />
           </NavLink>
           <NavLink
             className="py-[14px]"
-            onMouseEnter={() => setState("support")}
+            onMouseEnter={() => setState("bag")}
             onMouseLeave={() => setState(null)}
             route="/store">
             <Icon name="bag_icon" />
           </NavLink>
         </nav>
         <NavDropDown
-          className={`absolute top-10 bg-black text-white w-full transition-all ease-in-out duration-500 ${
+          className={`absolute top-10 bg-[#6E6E73] z-50 text-white w-full transition-all ease-in-out duration-500 ${
             state ? "h-[50vh] opacity-100" : "h-0 opacity-0"
           }`}
           nav={state}
