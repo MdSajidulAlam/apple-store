@@ -2,8 +2,9 @@ import React from "react";
 
 const Iphone = () => {
   return (
-    <div>
-      <p>Expore iPhone</p>
+    <div className="pt-8">
+      <p className="text-[#86868b]">Expore iPhone</p>
+      <p>Expore All iPhone</p>
     </div>
   );
 };

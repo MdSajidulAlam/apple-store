@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import Icon from "../Icon/Icon";
 import NavLink from "./NavLink";
 import NavDropDown from "./NavDropDown";
+import { useRouter } from "next/router";
 
 const Header = () => {
+  const router = useRouter();
   const [state, setState] = useState<string | null>(null);
   return (
     <section className="fixed top-0 w-full">
@@ -100,9 +102,22 @@ const Header = () => {
             route="/store">
             <Icon name="bag_icon" />
           </NavLink>
+          <NavLink
+            className="py-[14px]"
+            onMouseEnter={() => setState("bag")}
+            onMouseLeave={() => setState(null)}
+            route="/store">
+            <p>Sign in</p>
+          </NavLink>
+          <NavLink
+            className="py-[14px]"
+            // onClick={() => router.push("/auth/register")}
+            route="/auth/register">
+            <p>Sign up</p>
+          </NavLink>
         </nav>
         <NavDropDown
-          className={`absolute top-10 bg-[#6E6E73] z-50 text-white w-full transition-all ease-in-out duration-500 ${
+          className={`absolute top-10 bg-black z-50 text-white w-full transition-all ease-in-out duration-500 ${
             state ? "h-[50vh] opacity-100" : "h-0 opacity-0"
           }`}
           nav={state}

@@ -18,6 +18,9 @@ const config: Config = {
         secondary: "#000000",
         "common-button": "#06c",
       },
+      // container: {
+      //   width: "52%",
+      // },
     },
   },
   extend: {
